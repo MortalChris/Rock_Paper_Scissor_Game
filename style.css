@@ -1,0 +1,65 @@
+* {
+    background-color: #143147;
+    margin: 0;
+}
+
+/*Buttons*/
+.buttons {
+    text-align: center;
+    transition-duration: 0.9s;
+}
+button:hover {
+    background-color: #071929;
+    cursor:pointer;
+}
+button{
+   color: #fff;
+   background-color: #002a4a;
+   padding: 2rem 7rem;
+   border: none;
+   margin: 1rem;
+   align-self: center;
+   border-radius: 10px;
+   font-size: 2rem;
+}
+/*Heading*/
+.header-title{
+    color: white;
+    text-align: center;
+    background-color: #071838;
+    padding: 2rem;
+    font-size:2rem;
+}
+/*Below Heading*/
+.msg{
+    text-align: center;
+    padding: 2rem;
+    font-size:1.7rem;
+}
+p{
+    color: white;
+}
+.p1{
+    font-size:2rem; 
+}
+.p2{
+    padding-top: .3rem;
+    font-size:1.5rem;
+}
+/*Score count and handsign*/
+.output{
+    text-align: center;
+    padding: 2rem;
+}
+/*Footer*/
+.footer{
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:30px;
+    width:100%;
+    padding-top:10px;
+    background:#020c1f;
+    text-align: center;
+    color:white;
+}
