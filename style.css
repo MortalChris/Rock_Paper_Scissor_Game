@@ -16,6 +16,7 @@ button{
    color: #fff;
    background-color: #002a4a;
    padding: 2rem 7rem;
+   width:6rem 6rem;
    border: none;
    margin: 1rem;
    align-self: center;
@@ -39,17 +40,28 @@ button{
 p{
     color: white;
 }
+h2{
+    color: white;
+}
 .p1{
     font-size:2rem; 
+    color: white;
 }
 .p2{
+    color: white;
     padding-top: .3rem;
     font-size:1.5rem;
 }
 /*Score count and handsign*/
-.output{
+#output{
     text-align: center;
     padding: 2rem;
+}
+.output-player{
+
+}
+.output-cpu{
+    
 }
 /*Footer*/
 .footer{
