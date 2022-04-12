@@ -1,6 +1,6 @@
 const signPlayerDisplay = document.getElementById("sign-player")
 const signComputerDisplay = document.getElementById("sign-computer")
-const resultDisplay = document.getElementById("result")
+const resultDisplay = document.getElementById("Results")
 const possibleChoices = document.querySelectorAll("button")
 let userSign
 

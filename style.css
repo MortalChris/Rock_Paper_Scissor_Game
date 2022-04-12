@@ -5,7 +5,8 @@
 
 /*Buttons*/
 .buttonpack {
-    text-align: center;
+    display: flex;
+    justify-content: center;
     transition-duration: 0.9s;
 }
 button:hover {
@@ -54,14 +55,26 @@ h2{
 }
 /*Score count and handsign*/
 #output{
-    text-align: center;
-    padding: 2rem;
+    display: flex;
+    justify-content:center;
+    padding: 3rem;
 }
 .output-player{
-
+    padding-right: 4rem;
 }
 .output-cpu{
-    
+    padding-left: 4rem;
+}
+
+#Results{
+    display: flex;
+    justify-content:center;
+}
+#p-score{
+    width: 80%; float:right
+}
+#c-score{
+    width: 20%; float:left
 }
 /*Footer*/
 .footer{
