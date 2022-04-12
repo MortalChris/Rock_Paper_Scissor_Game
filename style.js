@@ -1,9 +1,21 @@
-const btn = document.querySelectorAll(".btn");
-let pScore = document.getElementById("p-score")
-let cScore = document.getElementById("c-score")
-let win = false
-let loss = false
+const signPlayerDisplay = document.getElementById("sign-player")
+const signComputerDisplay = document.getElementById("sign-computer")
+const resultDisplay = document.getElementById("result")
+const possibleChoices = document.querySelectorAll("button")
+let userSign
 
-function rock() {
+possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener("click", (e) => {
+    signPlayer = e.target.id
+    signPlayerDisplay.innerHTML = signPlayer
+}))
 
-}
+/* const computerChoiceDisplay = document.getElementById("computer-choice")
+const userChoiceDisplay = document.getElementById("user-choice")
+const resultDisplay = document.getElementById("result")
+const possibleChoices = document.querySelectorAll("button")
+let userSign
+
+possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener("click", (e) => {
+    userChoice = e.target.id
+    userChoiceDisplay.innerHTML = userChoice
+}))*/
