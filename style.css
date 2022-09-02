@@ -54,7 +54,8 @@ h2{
     padding-top: .3rem;
     font-size:1.5rem;
 }
-/*Score count and handsign*/
+
+/*Handsign*/
 #output{
     display: flex;
     justify-content:center;
@@ -67,6 +68,7 @@ h2{
     padding-left: 4rem;
 }
 
+/*Results and Score*/
 #Results{
     display: flex;
     justify-content:center;
@@ -76,6 +78,9 @@ h2{
 }
 #c-score{
     width: 20%; float:left
+}
+#outcome{
+
 }
 /*Footer*/
 .footer{
