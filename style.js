@@ -1,44 +1,42 @@
 const game = () => {
 
-    const signPlayerDisplay = document.getElementById("sign-player");
-    const signComputerDisplay = document.getElementById("sign-computer");
-    const pScore = document.getElementById("p-score")
-    const cScore = document.getElementById("c-score")
+    const signPlayer = document.getElementById("sign-player");
+    const signComputer = document.getElementById("sign-computer");
     const rockEl = document.getElementById("rock");
     const paperEl = document.getElementById("paper");
     const scissorEl = document.getElementById("scissor");
-    const outcome = document.getElementById("outcome");
-    const buttonsss = document.getElementsByTagName("buttonsss")
+    let btns = document.querySelectorAll('button');
     const choices = ["rock", "paper", "scissors"];
     let playerScore = 0;
     let computerScore = 0;
 
+
 /**************When player clicks button it will appear in " Your choice: "*************/
+
     rockEl.addEventListener("click", function(){
-    signPlayerDisplay.textContent =  " " + choices[0]
-
-    randomChoices = choices[Math.floor(Math.random()*choices.length)];
-    signComputerDisplay.textContent = " " + randomChoices
-    console.log(randomChoices);
-    console.log(signPlayerDisplay);
+        signPlayer.textContent =  " " + choices[0];
 });
+
     paperEl.addEventListener("click", function(){
-    signPlayerDisplay.textContent = " " + choices[1]
-
-    randomChoices = choices[Math.floor(Math.random()*choices.length)];
-    signComputerDisplay.textContent = " " + randomChoices
-    console.log(randomChoices);
+        signPlayer.textContent = " " + choices[1];
 });
+
     scissorEl.addEventListener("click", function(){
-    signPlayerDisplay.textContent = " " + choices[2]
-
-    randomChoices = choices[Math.floor(Math.random()*choices.length)];
-    signComputerDisplay.textContent = " " + randomChoices
-    console.log(randomChoices)
+        signPlayer.textContent = " " + choices[2];
 });
-
+    for (i of btns) {
+    i.addEventListener('click', function() {
+        randomChoices = choices[Math.floor(Math.random()*choices.length)];
+        signComputer.textContent = " " + randomChoices;
+        console.log(randomChoices);
+    });
+};
 /**************Code for who wins the round "*************/
+
     const winner = (cpu,plyr) => {
+        const pScore = document.getElementById("p-score").textContent;
+        const cScore = document.getElementById("c-score").textContent;
+        const outcome = document.getElementById("outcome").textContent;
         if (cpu === plyr){
             outcome.textContent = "Tie"
         }
@@ -76,11 +74,17 @@ const game = () => {
         }
     };
 
-    
+    winner(signComputer.textContent, signPlayer.textContent);
 }
 
 
 game();
+
+
+
+
+
+
 /**************The Computer gets a randomized hand sign"*************
 
 function getComputerChoice(){
