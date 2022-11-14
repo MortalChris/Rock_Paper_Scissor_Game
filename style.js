@@ -3,7 +3,8 @@ const game = () => {
     let cScoreboard = document.getElementById("c-score"); **/
     let playerScore= 0;
     let computerScore = 0;
- /**let randomChoices
+
+/**let randomChoices
     let playerChoice **/
     const choices = ["rock", "paper", "scissors"];
 /**************When player clicks button it will appear in " Your choice: "*************/
@@ -36,22 +37,20 @@ const playGame = () => {
                 let randomChoices = choices[Math.floor(Math.random() * choices.length)];
                 signComputer.textContent = randomChoices;
                 console.log(randomChoices);
-
                 winner(randomChoices, playerChoice);
                 return randomChoices;
 
             })
     }
 
-  
+
 }
 /**************Code for who wins the round "*************/
-
     const winner = (cpu, plyr) => {
         const outcome = document.getElementById("outcome-span");
         const pScoreboard = document.getElementById("p-score");
         const cScoreboard = document.getElementById("c-score");
-
+        
         if (cpu === plyr){
             outcome.textContent = "Tie"
         }
@@ -85,6 +84,22 @@ const playGame = () => {
             computerScore++;
             cScoreboard.textContent = computerScore;
     };
+
+
+/*************Ends the Game***************** */
+    const gameOver = () =>{
+        const gameOverSpan = document.getElementById("gameOverSpan");
+
+        if(pScoreboard.textContent == 10)
+            if(cScoreboard.textContent < pScoreboard.textContent){
+                console.log(gameOverSpan.textContent = "Player has won the entire game!");
+
+        }else if(cScoreboard.textContent == 10 && pScoreboard.textContent < cScoreboard.textContent){
+            console.log(gameOverSpan.textContent = "CPU has won the entire game!");
+        };
+        
+    };
+    gameOver();
 };
 
 
@@ -119,7 +134,7 @@ buttonEl.addEventListener("click", startGame(){
             outcome.textContent = "hi"
         }
     }
-   });
+});
 
 
 
